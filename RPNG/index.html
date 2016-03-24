@@ -1,0 +1,68 @@
+<html>
+	</head>
+		<title>Roleplay Name Generator</title>
+		<link rel="stylesheet" href="img/style.css" type="text/css" />
+	</head>
+	
+	<body>
+		<div id="logohead">
+			<center>
+				<img src="http://images.cooltext.com/4618700.png" width="1350" height="200" alt="Roleplay Name Generator">
+			</center>
+		</div>
+		
+		<div id="gen">
+			
+		<center><script type="text/javascript">
+
+var MaleForename = new Array("Rein","Ronus","Maximus","Rick","Benjamin","Micheal","Davis","David","Travis","James","Jeff","Chris")
+var FemaleForename = new Array("Amanda","Lilian","Jessica","Christelle","Kristianna","Hannah","Miranda","Leeah","Hailey","Courtney","Samantha","Megan","Emily","Felicia")
+var Surname = new Array("Dvorak", "Dvorakus", "Sherwood","Weaver","Mays","Miller","Mills","Graham","Myers","Romiegh","Rickson","Coperson","Audius","Vincent","Moore")
+
+var r=0
+var i=0
+
+function RandomName()
+{ 
+j=Math.floor(Math.random() * Surname.length); 
+if(document.NAMEIT.GENDER.options[1].selected == true)
+{
+i=Math.floor(Math.random() * FemaleForename.length);
+document.NAMEIT.NAME.value=FemaleForename[i] + " " + Surname[j]
+}
+else 
+{
+i=Math.floor(Math.random() * MaleForename.length);
+document.NAMEIT.NAME.value=MaleForename[i]  + " " + Surname[j]
+}
+}
+</script>
+<table border="1" cellpadding="0" cellspacing="0" bgcolor="#E4E4E4" bordercolor="#808080">
+<tr>
+<td>
+<h2 align="center"><font face="Arial" size="1"><br>
+</font><font face="Arial" size="3">Audaxia's Roleplay Random Name Generator <sup><h9>V.2.0.</h9></sup></font></H2><center><font face="Arial" size="1"><i>Created by Sad-States</i></font></center><br>
+<center>
+<form name="NAMEIT">
+<table>
+<tr>.
+<td align="right" valign="top"><b><font face="Arial" size="2"> Preferred Gender:</font></b></td><br>
+<td valign="top"><font face="Arial" size="2"><select name="GENDER" SIZE="1"> <option value="Male">Male 
+</option> <option value="Female">Female</option></select>
+</font>
+</td>
+<td align="right" valign="top"><b><font face="Arial" size="2"> Look at you, </font></b></td>
+<td valign="top"><font face="Arial" size="2"><input type="TEXT" name="NAME" size="20"></font></TD>
+</tr>
+</table>
+<p align="center"><input type="button" name="btnGen" value="Generate"
+onclick="RandomName()"></p>
+</form>
+</center>
+</td>
+</tr>
+</table>
+			</center>
+		</div>
+	</body>
+</html>
